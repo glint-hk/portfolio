@@ -482,7 +482,15 @@ function Footer() {
     <footer className="py-8 border-t border-zinc-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-zinc-500">
-          <span>© 2026 Hrishikesh Kumar</span>
+          <a
+            href="https://glint-hk.github.io/HrishikeshKumar/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-zinc-500 hover:text-indigo-400 transition-colors"
+          >
+            <span>© {new Date().getFullYear()} Hrishikesh Kumar</span>
+          </a>
+
           <span>Designed & built by Hrishikesh Kumar</span>
         </div>
       </div>
