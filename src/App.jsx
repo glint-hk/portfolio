@@ -11,6 +11,7 @@ import {
   ArrowRight,
   Mail,
   Calendar,
+  Linkedin,
   Menu,
   X,
   CheckCircle2,
@@ -174,7 +175,13 @@ export default function Portfolio() {
               href="#services"
               className="text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
             >
-              Expertise
+              Services
+            </a>
+            <a
+              href="#work"
+              className="text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              Selected Work
             </a>
             <a
               href="#process"
@@ -207,6 +214,49 @@ export default function Portfolio() {
           </button>
         </div>
       </nav>
+
+      {/* MOBILE MENU OVERLAY */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 z-40 bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md pt-24 px-6 md:hidden flex flex-col gap-6"
+          >
+            <a
+              href="#services"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-2xl font-semibold tracking-tight border-b border-slate-100 dark:border-zinc-900 pb-4"
+            >
+              Expertise
+            </a>
+            <a
+              href="#work"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-2xl font-semibold tracking-tight border-b border-slate-100 dark:border-zinc-900 pb-4"
+            >
+              Selected Work
+            </a>
+            <a
+              href="#process"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-2xl font-semibold tracking-tight border-b border-slate-100 dark:border-zinc-900 pb-4"
+            >
+              Process
+            </a>
+            <a
+              href="https://calendly.com/hrishikeshkumar/30min"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="mt-4 px-6 py-4 bg-indigo-600 text-white text-center font-medium rounded-full"
+            >
+              Book Strategy Call
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* HERO SECTION */}
       <section className="relative pt-40 pb-20 overflow-hidden flex flex-col justify-center min-h-[90vh]">
@@ -591,7 +641,7 @@ export default function Portfolio() {
               rel="noreferrer"
               className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-blue-600 text-white font-medium rounded-full hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-500/20 transition-all"
             >
-              <PersonStandingIcon fontSize="small" />
+              <Linkedin size={20} />
               Check out my profile
             </a>
           </motion.div>
