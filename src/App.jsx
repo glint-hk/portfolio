@@ -73,7 +73,7 @@ function Navigation({ activeSection }) {
 
             {/* CTA Button (Desktop) */}
             <a
-              href="https://calendly.com/hrishikesh"
+              href="https://calendly.com/hrishikeshkumar/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:block btn-primary text-sm"
@@ -129,7 +129,7 @@ function Navigation({ activeSection }) {
             Contact
           </a>
           <a
-            href="https://calendly.com/hrishikesh"
+            href="https://calendly.com/hrishikeshkumar/30min"
             target="_blank"
             rel="noopener noreferrer"
             onClick={handleNavClick}
@@ -196,7 +196,7 @@ function HeroSection() {
             <ArrowRight size={18} />
           </a>
           <a
-            href="https://calendly.com/hrishikeshkumar"
+            href="https://calendly.com/hrishikeshkumar/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary"
@@ -208,7 +208,7 @@ function HeroSection() {
         {/* Trust Badges */}
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
           <div className="trust-badge">PM @ Fortune 100</div>
-          <div className="trust-badge">Ex-Carrier R&D</div>
+          <div className="trust-badge">Ex-Sr Engineer @ R&D</div>
           <div className="trust-badge">MBA @ IIM Lucknow</div>
           <div className="trust-badge">Full-Stack Builder</div>
         </div>
