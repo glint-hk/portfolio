@@ -9,11 +9,13 @@ import {
   BarChart3,
   CloudCog,
   ArrowRight,
+  Mail,
+  Calendar,
   Menu,
   X,
   CheckCircle2,
+  PersonStandingIcon,
 } from "lucide-react";
-import { CalendarToday, Email, LinkedIn } from "@mui/icons-material";
 
 // ============================================
 // DATA: THE 5 PREMIUM OFFERINGS
@@ -261,6 +263,26 @@ export default function Portfolio() {
                 <span>•</span>
                 <span>PM @ Fortune 100</span>
               </div>
+              <motion.div
+                variants={fadeUp}
+                className="flex flex-wrap gap-6 mt-2 pt-8"
+              >
+                {[
+                  { number: "$1M+", label: "Revenue Impact" },
+                  { number: "550+", label: "Developers Scaled" },
+                  { number: "3yrs", label: "Enterprise AI Execution" },
+                  { number: "IIM", label: "Lucknow MBA" },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+                      {stat.number}
+                    </div>
+                    <div className="text-sm text-slate-500 dark:text-zinc-500">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
@@ -361,6 +383,89 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
+      <section
+        id="work"
+        className="py-32 border-t border-slate-200 dark:border-zinc-800/50"
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
+              Selected Work
+            </h2>
+            <p className="text-slate-600 dark:text-zinc-400 text-lg">
+              Real products. Measurable outcomes.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                label: "AI Product Scale",
+                company: "Carrier Technologies",
+                description:
+                  "Scaled an intelligent AI assistant to 550+ developers. Engineered front-end for 5 LLM Q&A tools, reducing query resolution time by 40%.",
+                tags: ["LLM", "React", "AI/ML"],
+                metric: "550+ users · 40% faster resolution",
+                color: "indigo",
+              },
+              {
+                label: "Product Strategy & Revenue",
+                company: "Carrier Technologies",
+                description:
+                  "Revamped a legacy security product to replace obsolete infrastructure. Drove full stakeholder alignment and generated $1M in new revenue.",
+                tags: ["Product Strategy", "Stakeholder Mgmt", "B2B"],
+                metric: "$1M revenue impact",
+                color: "emerald",
+              },
+              {
+                label: "PM Internship",
+                company: "American Express",
+                description:
+                  "Designed data tracking and campaign attribution infrastructure for a Fortune 100 financial platform processing millions of user events.",
+                tags: ["Data Strategy", "Analytics", "Agile"],
+                metric: "Fortune 100 · Enterprise Scale",
+                color: "indigo",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="p-8 rounded-3xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 hover:border-indigo-300 dark:hover:border-indigo-800 transition-colors"
+              >
+                <div className="text-xs font-mono text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2">
+                  {item.label}
+                </div>
+                <div className="text-lg font-semibold mb-3">{item.company}</div>
+                <p className="text-sm text-slate-600 dark:text-zinc-400 leading-relaxed mb-6">
+                  {item.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {item.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="pt-4 border-t border-slate-200 dark:border-zinc-800 text-sm font-medium text-emerald-600 dark:text-emerald-400">
+                  {item.metric}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* PROCESS SECTION */}
       <section id="process" className="py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
@@ -449,14 +554,14 @@ export default function Portfolio() {
                 rel="noreferrer"
                 className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-medium rounded-full hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-500/20 transition-all"
               >
-                <CalendarToday size={18} />
+                <Calendar size={18} />
                 Book a Strategy Call
               </a>
               <a
                 href="mailto:hrishikeshkumar16@gmail.com"
                 className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-slate-900 dark:text-white font-medium rounded-full hover:bg-slate-50 dark:hover:bg-zinc-700 transition-all"
               >
-                <Email size={18} />
+                <Mail size={18} />
                 Send an Email
               </a>
             </div>
@@ -486,7 +591,7 @@ export default function Portfolio() {
               rel="noreferrer"
               className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-blue-600 text-white font-medium rounded-full hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-500/20 transition-all"
             >
-              <LinkedIn fontSize="small" />
+              <PersonStandingIcon fontSize="small" />
               Check out my profile
             </a>
           </motion.div>
