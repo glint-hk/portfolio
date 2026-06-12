@@ -13,6 +13,7 @@ import {
   X,
   CheckCircle2,
 } from "lucide-react";
+import { CalendarToday, Email, LinkedIn } from "@mui/icons-material";
 
 // ============================================
 // DATA: THE 5 PREMIUM OFFERINGS
@@ -360,6 +361,108 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
+      {/* PROCESS SECTION */}
+      <section id="process" className="py-32 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeUp}
+            className="mb-16 md:text-center"
+          >
+            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
+              How We Ship
+            </h2>
+            <p className="text-slate-600 dark:text-zinc-400 text-lg max-w-2xl md:mx-auto">
+              A transparent, agile framework designed to get you from whiteboard
+              to deployment in weeks, not months.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8 relative">
+            {/* Connecting line for desktop */}
+            <div className="hidden md:block absolute top-12 left-1/6 right-1/6 h-[1px] bg-slate-200 dark:bg-zinc-800 -z-10" />
+
+            {[
+              {
+                step: "01",
+                title: "Discovery & PRD",
+                desc: "We align on business goals, map the user journey, and lock in the exact Product Requirements Document (PRD).",
+              },
+              {
+                step: "02",
+                title: "The Sprint",
+                desc: "Full-stack execution (React/PHP/SQL) combined with weekly agile check-ins. No black boxes, just shipped features.",
+              },
+              {
+                step: "03",
+                title: "Handoff & Growth",
+                desc: "Deployment, analytics instrumentation (Mixpanel/PostHog), and comprehensive documentation for your future engineering hires.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2 }}
+                className="relative bg-white dark:bg-zinc-900/80 border border-slate-200 dark:border-zinc-800 p-8 rounded-3xl"
+              >
+                <div className="w-14 h-14 bg-slate-100 dark:bg-zinc-950 border border-slate-200 dark:border-zinc-800 rounded-full flex items-center justify-center text-lg font-mono font-bold text-indigo-600 dark:text-indigo-400 mb-6">
+                  {item.step}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                <p className="text-slate-600 dark:text-zinc-400 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT SECTION */}
+      <section
+        id="contact"
+        className="py-32 bg-slate-50 dark:bg-zinc-900/30 border-t border-slate-200 dark:border-zinc-800/50"
+      >
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+          >
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
+              Ready to scale? Let's talk.
+            </h2>
+            <p className="text-slate-600 dark:text-zinc-400 text-lg mb-10 max-w-xl mx-auto">
+              Currently accepting select engagements for Q3 2026. Book a
+              discovery call to discuss your product roadmap and infrastructure.
+            </p>
+
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <a
+                href="https://calendly.com"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-medium rounded-full hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-500/20 transition-all"
+              >
+                <CalendarToday size={18} />
+                Book a Strategy Call
+              </a>
+              <a
+                href="mailto:hrishikeshkumar16@gmail.com"
+                className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-slate-900 dark:text-white font-medium rounded-full hover:bg-slate-50 dark:hover:bg-zinc-700 transition-all"
+              >
+                <Email size={18} />
+                Send an Email
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* FOOTER / CTA */}
       <footer className="py-24 relative overflow-hidden">
@@ -378,12 +481,13 @@ export default function Portfolio() {
             viewport={{ once: true }}
           >
             <a
-              href="https://calendly.com/hrishikeshkumar/30min"
+              href="https://www.linkedin.com/in/glint-hk/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-medium rounded-full hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-500/20 transition-all"
+              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-blue-600 text-white font-medium rounded-full hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-500/20 transition-all"
             >
-              Book a Strategy Call <ArrowRight size={18} />
+              <LinkedIn fontSize="small" />
+              Check out my profile
             </a>
           </motion.div>
         </div>
