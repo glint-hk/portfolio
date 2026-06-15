@@ -39,6 +39,7 @@ npm run preview
 ### Step 1: Update Configuration
 
 1. Open `vite.config.js` and update the `base` path to match your repo name:
+
    ```js
    base: '/your-repo-name/',
    ```
@@ -69,6 +70,7 @@ npm run deploy
 ```
 
 This will:
+
 1. Build the project (`npm run predeploy` runs `npm run build`)
 2. Deploy the `dist` folder to the `gh-pages` branch
 
@@ -90,7 +92,7 @@ All content is located in `src/App.jsx`. Update the following:
 - **Hero Section**: Headline, tagline, and trust badges
 - **Services Section**: Service cards with icons, descriptions, and pricing
 - **Case Studies**: Project cards with descriptions and tags
-- **Contact Section**: Calendly link and email address
+- **Contact Section**: Cal link and email address
 - **Footer**: Copyright text
 
 ### Update Colors

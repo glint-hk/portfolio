@@ -199,7 +199,7 @@ export default function Portfolio() {
             </button>
 
             <a
-              href="https://calendly.com/hrishikeshkumar/30min"
+              href="https://cal.com/hrishikesh-kumar/30-min-strategy-call"
               target="_blank"
               rel="noreferrer"
               className="px-5 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-zinc-950 text-sm font-medium rounded-full hover:scale-105 transition-transform"
@@ -246,7 +246,7 @@ export default function Portfolio() {
               Process
             </a>
             <a
-              href="https://calendly.com/hrishikeshkumar/30min"
+              href="https://cal.com/hrishikesh-kumar/30-min-strategy-call"
               target="_blank"
               rel="noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -599,7 +599,7 @@ export default function Portfolio() {
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
               <a
-                href="https://calendly.com"
+                href="https://cal.com/hrishikesh-kumar/30-min-strategy-call"
                 target="_blank"
                 rel="noreferrer"
                 className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-medium rounded-full hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-500/20 transition-all"
