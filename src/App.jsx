@@ -184,6 +184,12 @@ export default function Portfolio() {
               Selected Work
             </a>
             <a
+              href="#builds"
+              className="text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              Build Log
+            </a>
+            <a
               href="#process"
               className="text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
             >
@@ -516,6 +522,221 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
+
+      {/* BUILD LOG SECTION */}
+      <section
+        id="builds"
+        className="py-32 bg-white dark:bg-zinc-900/50 border-t border-slate-200 dark:border-zinc-800/50"
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeUp}
+            className="mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
+              Build Log
+            </h2>
+            <p className="text-slate-600 dark:text-zinc-400 text-lg max-w-xl">
+              Things I ship to sharpen skills and demonstrate exactly what a
+              client engagement deliverable looks like — live, clickable, open
+              source.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {/* Project 1 — AI Scheduling Agent */}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -5 }}
+              className="group flex flex-col p-8 rounded-3xl border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-950/50 hover:bg-white dark:hover:bg-zinc-900 hover:border-indigo-300 dark:hover:border-indigo-700 transition-all duration-300"
+            >
+              <div className="flex items-start justify-between mb-6">
+                <span className="px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 text-xs font-medium">
+                  AI Product Build
+                </span>
+                <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <a
+                    href="https://scheduling-agent-eight.vercel.app"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
+                  >
+                    Live →
+                  </a>
+                  <a
+                    href="https://github.com/glint-hk/scheduling-agent"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-medium text-slate-400 dark:text-zinc-600 hover:text-indigo-600 dark:hover:text-indigo-400"
+                  >
+                    GitHub →
+                  </a>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">
+                AI Scheduling Negotiation Agent
+              </h3>
+              <p className="text-slate-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+                An LLM-powered agent that negotiates meeting times based on
+                stated priorities and calendar context — not rigid slot-picking.
+                Explores the same human-nuance problem modern AI scheduling
+                startups are built around.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {[
+                  "Claude API",
+                  "React",
+                  "Vercel Serverless",
+                  "Prompt Engineering",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <a
+                href="https://scheduling-agent-eight.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:gap-3 transition-all"
+              >
+                Try the demo <ArrowRight size={16} />
+              </a>
+            </motion.div>
+
+            {/* Project 2 — Founder Analytics Dashboard */}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -5 }}
+              className="group flex flex-col p-8 rounded-3xl border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-950/50 hover:bg-white dark:hover:bg-zinc-900 hover:border-emerald-300 dark:hover:border-emerald-700 transition-all duration-300"
+            >
+              <div className="flex items-start justify-between mb-6">
+                <span className="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-medium">
+                  Data Infrastructure
+                </span>
+                <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <a
+                    href="https://glint-hk.github.io/analytics-dashboard-demo/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    Live →
+                  </a>
+                  <a
+                    href="https://github.com/glint-hk/analytics-dashboard-demo"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-medium text-slate-400 dark:text-zinc-600 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  >
+                    GitHub →
+                  </a>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">
+                Founder Analytics Dashboard
+              </h3>
+              <p className="text-slate-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+                A sample Data & Growth Audit deliverable — activation funnel,
+                cohort retention, MRR breakdown, and channel attribution for a
+                fictional SaaS startup. Every panel includes a strategic
+                insight, not just a chart.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {["Recharts", "React", "SaaS Metrics", "Data Strategy"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
+              </div>
+              <a
+                href="https://glint-hk.github.io/analytics-dashboard-demo/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:gap-3 transition-all"
+              >
+                View dashboard <ArrowRight size={16} />
+              </a>
+            </motion.div>
+
+            {/* Project 3 — AI PRD Generator */}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -5 }}
+              className="group flex flex-col p-8 rounded-3xl border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-950/50 hover:bg-white dark:hover:bg-zinc-900 hover:border-amber-300 dark:hover:border-amber-700 transition-all duration-300"
+            >
+              <div className="flex items-start justify-between mb-6">
+                <span className="px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 text-xs font-medium">
+                  Fractional PM
+                </span>
+                <div className="flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <a
+                    href="https://ai-prd-generator-bay.vercel.app"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-medium text-amber-600 dark:text-amber-400 hover:underline"
+                  >
+                    Live →
+                  </a>
+                  <a
+                    href="https://github.com/glint-hk/ai-prd-generator"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-medium text-slate-400 dark:text-zinc-600 hover:text-amber-600 dark:hover:text-amber-400"
+                  >
+                    GitHub →
+                  </a>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">AI PRD Generator</h3>
+              <p className="text-slate-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+                Type your product idea — get back a complete Product
+                Requirements Document in the exact format I deliver for clients.
+                Problem statement, prioritized features, success metrics, open
+                questions, and a Sprint 1 goal.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {["Claude API", "React", "PM Frameworks", "Vercel"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
+              </div>
+              <a
+                href="https://ai-prd-generator-bay.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-amber-600 dark:text-amber-400 hover:gap-3 transition-all"
+              >
+                Generate a PRD <ArrowRight size={16} />
+              </a>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* PROCESS SECTION */}
       <section id="process" className="py-32 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
@@ -608,7 +829,7 @@ export default function Portfolio() {
                 Book a Strategy Call
               </a>
               <a
-                href="mailto:hrishikeshkumar16@gmail.com"
+                href="mailto:hello@hrishikeshkumar.me"
                 className="w-full sm:w-auto inline-flex justify-center items-center gap-2 px-8 py-4 bg-white dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700 text-slate-900 dark:text-white font-medium rounded-full hover:bg-slate-50 dark:hover:bg-zinc-700 transition-all"
               >
                 <Mail size={18} />
