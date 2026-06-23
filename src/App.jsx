@@ -33,7 +33,7 @@ const services = [
       "RAG Pipelines",
       "Investor-Ready Analytics",
     ],
-    price: "$4k - $6k / Sprint",
+    price: "$1.5k - $2.5k / Sprint",
     featured: true,
   },
   {
@@ -47,7 +47,7 @@ const services = [
       "PRD & Wireframes",
       "Event Tracking Setup",
     ],
-    price: "$2.5k - $4k / Project",
+    price: "$1.2k - $2k / Project",
     featured: false,
   },
   {
@@ -57,7 +57,7 @@ const services = [
     description:
       "Embedded PM leadership. I translate abstract business goals into precise engineering tickets and manage the agile sprint cycles.",
     deliverables: ["Roadmap Ownership", "Sprint Planning", "KPI Dashboards"],
-    price: "From $1.5k / mo",
+    price: "From $0.8k / mo",
     featured: false,
   },
   {
@@ -71,7 +71,7 @@ const services = [
       "Funnel Instrumentation",
       "Growth Audit",
     ],
-    price: "Fixed $1.5k",
+    price: "From $0.8k / mo",
     featured: false,
   },
   {
@@ -315,7 +315,7 @@ export default function Portfolio() {
                 Explore Services <ArrowRight size={18} />
               </a>
               <div className="flex items-center gap-4 text-sm font-medium text-slate-500 dark:text-zinc-500 ml-4 border-l border-slate-300 dark:border-zinc-800 pl-4">
-                <span>Ex-Carrier R&D</span>
+                <span>Ex-Sr Eng @ Fortune 500</span>
                 <span>•</span>
                 <span>PM @ Fortune 100</span>
               </div>
@@ -463,7 +463,7 @@ export default function Portfolio() {
             {[
               {
                 label: "AI Product Scale",
-                company: "Carrier Technologies",
+                company: "Fortune 500",
                 description:
                   "Scaled an intelligent AI assistant to 550+ developers. Engineered front-end for 5 LLM Q&A tools, reducing query resolution time by 40%.",
                 tags: ["LLM", "React", "AI/ML"],
@@ -472,7 +472,7 @@ export default function Portfolio() {
               },
               {
                 label: "Product Strategy & Revenue",
-                company: "Carrier Technologies",
+                company: "Fortune 500",
                 description:
                   "Revamped a legacy security product to replace obsolete infrastructure. Drove full stakeholder alignment and generated $1M in new revenue.",
                 tags: ["Product Strategy", "Stakeholder Mgmt", "B2B"],
@@ -480,10 +480,10 @@ export default function Portfolio() {
                 color: "emerald",
               },
               {
-                label: "PM Internship",
-                company: "American Express",
+                label: "PM & Data Infrastructure",
+                company: "Fortune 100",
                 description:
-                  "Designed data tracking and campaign attribution infrastructure for a Fortune 100 financial platform processing millions of user events.",
+                  "Managed data tracking and campaign attribution infrastructure for a Fortune 100 financial platform processing millions of user events.",
                 tags: ["Data Strategy", "Analytics", "Agile"],
                 metric: "Fortune 100 · Enterprise Scale",
                 color: "indigo",
@@ -572,14 +572,6 @@ export default function Portfolio() {
                   >
                     Live →
                   </a>
-                  <a
-                    href="https://github.com/glint-hk/scheduling-agent"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-xs font-medium text-slate-400 dark:text-zinc-600 hover:text-indigo-600 dark:hover:text-indigo-400"
-                  >
-                    GitHub →
-                  </a>
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-3">
@@ -635,14 +627,6 @@ export default function Portfolio() {
                   >
                     Live →
                   </a>
-                  <a
-                    href="https://github.com/glint-hk/analytics-dashboard-demo"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-xs font-medium text-slate-400 dark:text-zinc-600 hover:text-emerald-600 dark:hover:text-emerald-400"
-                  >
-                    GitHub →
-                  </a>
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-3">
@@ -694,14 +678,6 @@ export default function Portfolio() {
                     className="text-xs font-medium text-amber-600 dark:text-amber-400 hover:underline"
                   >
                     Live →
-                  </a>
-                  <a
-                    href="https://github.com/glint-hk/ai-prd-generator"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-xs font-medium text-slate-400 dark:text-zinc-600 hover:text-amber-600 dark:hover:text-amber-400"
-                  >
-                    GitHub →
                   </a>
                 </div>
               </div>
