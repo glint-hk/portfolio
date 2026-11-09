@@ -315,7 +315,7 @@ export default function Portfolio() {
                 Explore Services <ArrowRight size={18} />
               </a>
               <div className="flex items-center gap-4 text-sm font-medium text-slate-500 dark:text-zinc-500 ml-4 border-l border-slate-300 dark:border-zinc-800 pl-4">
-                <span>Ex-Sr Eng @ Fortune 500</span>
+                <span>Ex-Sr Eng @ Fortune 500 (Top 250)</span>
                 <span>•</span>
                 <span>PM @ Fortune 100</span>
               </div>
@@ -463,7 +463,7 @@ export default function Portfolio() {
             {[
               {
                 label: "AI Product Scale",
-                company: "Fortune 500",
+                company: "Fortune 500 (Top 250)",
                 description:
                   "Scaled an intelligent AI assistant to 550+ developers. Engineered front-end for 5 LLM Q&A tools, reducing query resolution time by 40%.",
                 tags: ["LLM", "React", "AI/ML"],
@@ -472,7 +472,7 @@ export default function Portfolio() {
               },
               {
                 label: "Product Strategy & Revenue",
-                company: "Fortune 500",
+                company: "Fortune 500 (Top 250)",
                 description:
                   "Revamped a legacy security product to replace obsolete infrastructure. Drove full stakeholder alignment and generated $1M in new revenue.",
                 tags: ["Product Strategy", "Stakeholder Mgmt", "B2B"],
