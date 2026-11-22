@@ -184,6 +184,12 @@ export default function Portfolio() {
               Selected Work
             </a>
             <a
+              href="#bharosa"
+              className="text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            >
+              Bharosa
+            </a>
+            <a
               href="#builds"
               className="text-sm font-medium hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
             >
@@ -523,6 +529,430 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* FEATURED VENTURE — BHAROSA */}
+      <section
+        id="bharosa"
+        className="py-32 bg-white dark:bg-zinc-900/50 border-t border-slate-200 dark:border-zinc-800/50"
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeUp}
+            className="mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
+              Featured Venture
+            </h2>
+            <p className="text-slate-600 dark:text-zinc-400 text-lg max-w-xl">
+              A product I co-founded and took from field research to a working
+              prototype: problem, guardrail logic, architecture, and build.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeUp}
+            className="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-950/50"
+          >
+            <div className="absolute -top-24 -right-24 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-500/15 blur-[100px] rounded-full pointer-events-none" />
+
+            <div className="relative grid lg:grid-cols-2 gap-10 p-8 md:p-12">
+              {/* Left: story */}
+              <div className="flex flex-col">
+                <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 text-xs font-medium">
+                    Fintech · AI Safety Layer
+                  </span>
+                  <span className="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-medium">
+                    Google Startup Buildathon India 2026
+                  </span>
+                </div>
+
+                <h3 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">
+                  Bharosa{" "}
+                  <span className="text-slate-400 dark:text-zinc-500 font-normal">
+                    भरोसा
+                  </span>
+                </h3>
+                <div className="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-5">
+                  Co-founder, Product · Voice-first UPI companion
+                </div>
+
+                <p className="text-slate-600 dark:text-zinc-400 leading-relaxed mb-4">
+                  Senior citizens in India lost ₹4,005 crore to cyber fraud in
+                  2025, and many older adults, digital beginners, and people
+                  with disabilities avoid UPI out of fear. No payment app
+                  checks the person, the moment, and the context before the
+                  PIN.
+                </p>
+                <p className="text-slate-600 dark:text-zinc-400 leading-relaxed mb-8">
+                  Bharosa lets the user pay by speaking one sentence in Hindi
+                  or English. Gemini extracts the payee, amount, and purpose,
+                  35 guardrails check for fake QR codes, scam calls, and
+                  unusual amounts, and a trusted family guardian approves
+                  anything risky. The PIN stays in the user's own UPI app.
+                </p>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 mb-8 border-y border-slate-200 dark:border-zinc-800">
+                  {[
+                    ["35", "guardrails designed"],
+                    ["31", "running in the prototype"],
+                    ["15", "field interviews"],
+                    ["2", "languages, Hindi + English"],
+                  ].map(([value, label]) => (
+                    <div key={label}>
+                      <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">
+                        {value}
+                      </div>
+                      <div className="text-xs text-slate-500 dark:text-zinc-500">
+                        {label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="space-y-3 mb-8">
+                  {[
+                    "AI suggests, fixed rules decide: model output can only raise risk, never lower it",
+                    "Guardian approves risky payments, but can't start one or see the balance",
+                    "Never sees the PIN and never moves money; hands off through a standard UPI intent",
+                  ].map((item) => (
+                    <div
+                      key={item}
+                      className="flex items-start gap-3 text-sm text-slate-700 dark:text-zinc-300"
+                    >
+                      <CheckCircle2
+                        size={16}
+                        className="text-emerald-500 mt-0.5 shrink-0"
+                      />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {[
+                    "Gemini 3.5 Flash",
+                    "Firebase Hosting",
+                    "Firestore",
+                    "Vercel Serverless",
+                    "Web Speech API",
+                    "UPI Intents",
+                  ].map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap items-center gap-4 mt-auto">
+                  <a
+                    href="https://bharosa-buildathon.web.app/demo/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-zinc-950 text-sm font-medium rounded-full hover:shadow-lg hover:-translate-y-0.5 transition-all inline-flex items-center gap-2"
+                  >
+                    Try the prototype <ArrowRight size={16} />
+                  </a>
+                  <a
+                    href="https://bharosa-buildathon.web.app"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:gap-3 transition-all"
+                  >
+                    Landing page <ArrowRight size={16} />
+                  </a>
+                </div>
+              </div>
+
+              {/* Right: flow + architecture */}
+              <div className="flex flex-col gap-6">
+                <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
+                  {[
+                    ["1", "Speak", "Payee, amount, purpose in one sentence"],
+                    ["2", "Scan", "Voice and vibration guide the camera"],
+                    ["3", "Check", "Guardrails run before the PIN"],
+                    ["4", "Say it back", "Repeat a random detail to confirm"],
+                    ["5", "Pay", "Own UPI app opens pre-filled"],
+                  ].map(([step, title, desc]) => (
+                    <div
+                      key={step}
+                      className="p-3 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/80"
+                    >
+                      <div className="text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400 mb-1">
+                        0{step}
+                      </div>
+                      <div className="text-sm font-semibold leading-tight mb-1">
+                        {title}
+                      </div>
+                      <div className="hidden sm:block text-xs text-slate-500 dark:text-zinc-500 leading-snug">
+                        {desc}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <a
+                  href="/bharosa-architecture.webp"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group block rounded-2xl overflow-hidden border border-slate-200 dark:border-zinc-800 bg-white"
+                >
+                  <img
+                    src="/bharosa-architecture.webp"
+                    alt="Bharosa system architecture: senior's phone, Google Cloud guardrail engine, and guardian's phone"
+                    loading="lazy"
+                    width={2400}
+                    height={1288}
+                    className="w-full h-auto group-hover:scale-[1.02] transition-transform duration-500"
+                  />
+                </a>
+                <div className="text-xs text-slate-500 dark:text-zinc-500">
+                  System architecture: on-device speech and QR scanning, a
+                  versioned guardrail engine on Google Cloud, and signed
+                  guardian approvals. Click to enlarge.
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CAMPUS PLATFORMS SECTION */}
+      <section
+        id="campus-platforms"
+        className="py-32 border-t border-slate-200 dark:border-zinc-800/50"
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeUp}
+            className="mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-semibold tracking-tight mb-4">
+              Campus Platforms
+            </h2>
+            <p className="text-slate-600 dark:text-zinc-400 text-lg max-w-xl">
+              Internal products built for IIM Lucknow — used by the full
+              student body across elections, mentorship, club selection, and
+              event operations.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 gap-6"
+          >
+            {/* Platform 1 — Parthsaarthi */}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -5 }}
+              className="group flex flex-col p-8 rounded-3xl border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-950/50 hover:bg-white dark:hover:bg-zinc-900 hover:border-indigo-300 dark:hover:border-indigo-700 transition-all duration-300"
+            >
+              <div className="flex items-start justify-between mb-6">
+                <span className="px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 text-xs font-medium">
+                  Mentorship Platform
+                </span>
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Parthsaarthi</h3>
+              <div className="text-sm font-medium text-indigo-600 dark:text-indigo-400 mb-3">
+                Mentor-mentee slot booking platform
+              </div>
+              <p className="text-slate-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+                Mentor-mentee scheduling ran on spreadsheets and WhatsApp,
+                with double-bookings whenever many students reached for the
+                same slot at once. Parthsaarthi replaces that with optimistic
+                concurrency control on slot allocation, Google SSO login, and
+                role-based access for mentors, mentees, and admins.
+              </p>
+              <div className="grid grid-cols-3 gap-3 pt-6 mb-6 border-t border-slate-200 dark:border-zinc-800">
+                {[
+                  ["[ADD]", "mentor–mentee pairs"],
+                  ["[ADD]", "slots booked / term"],
+                  ["[ADD]%", "fewer double-bookings"],
+                ].map(([value, label]) => (
+                  <div key={label}>
+                    <div className="text-lg font-semibold italic text-slate-400 dark:text-zinc-500">
+                      {value}
+                    </div>
+                    <div className="text-xs text-slate-500 dark:text-zinc-500">
+                      {label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {["React", "Vite", "Node.js", "PostgreSQL", "Google SSO"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-600 dark:text-zinc-400"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
+              </div>
+            </motion.div>
+
+            {/* Platform 2 — Hodor */}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -5 }}
+              className="group flex flex-col p-8 rounded-3xl border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-950/50 hover:bg-white dark:hover:bg-zinc-900 hover:border-emerald-300 dark:hover:border-emerald-700 transition-all duration-300"
+            >
+              <div className="flex items-start justify-between mb-6">
+                <span className="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-medium">
+                  Student Elections
+                </span>
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Hodor</h3>
+              <div className="text-sm font-medium text-emerald-600 dark:text-emerald-400 mb-3">
+                Student body election platform
+              </div>
+              <p className="text-slate-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 flex-grow italic">
+                [ADD 2–3 SENTENCES: how elections were run before Hodor, and
+                what Hodor does for voting integrity, authentication, and
+                result transparency]
+              </p>
+              <div className="grid grid-cols-3 gap-3 pt-6 mb-6 border-t border-slate-200 dark:border-zinc-800">
+                {[
+                  ["[ADD]", "eligible voters"],
+                  ["[ADD]%", "voter turnout"],
+                  ["[ADD]", "elections run"],
+                ].map(([value, label]) => (
+                  <div key={label}>
+                    <div className="text-lg font-semibold italic text-slate-400 dark:text-zinc-500">
+                      {value}
+                    </div>
+                    <div className="text-xs text-slate-500 dark:text-zinc-500">
+                      {label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {["[Frontend]", "[Backend]", "[Database]", "[Auth]"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs italic rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-400 dark:text-zinc-500"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
+              </div>
+            </motion.div>
+
+            {/* Platform 3 — Verona */}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -5 }}
+              className="group flex flex-col p-8 rounded-3xl border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-950/50 hover:bg-white dark:hover:bg-zinc-900 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-300"
+            >
+              <div className="flex items-start justify-between mb-6">
+                <span className="px-3 py-1 rounded-full bg-violet-100 dark:bg-violet-500/10 text-violet-700 dark:text-violet-300 text-xs font-medium">
+                  Social Matching
+                </span>
+              </div>
+              <h3 className="text-xl font-semibold mb-1">Verona</h3>
+              <div className="text-sm font-medium text-violet-600 dark:text-violet-400 mb-3">
+                Campus social matching platform
+              </div>
+              <p className="text-slate-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 flex-grow italic">
+                [ADD 2–3 SENTENCES: what social/connection problem Verona
+                solves on campus, and the matching mechanism behind it]
+              </p>
+              <div className="grid grid-cols-3 gap-3 pt-6 mb-6 border-t border-slate-200 dark:border-zinc-800">
+                {[
+                  ["[ADD]", "students matched"],
+                  ["[ADD]%", "response rate"],
+                  ["[ADD]", "matches made"],
+                ].map(([value, label]) => (
+                  <div key={label}>
+                    <div className="text-lg font-semibold italic text-slate-400 dark:text-zinc-500">
+                      {value}
+                    </div>
+                    <div className="text-xs text-slate-500 dark:text-zinc-500">
+                      {label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {["[Frontend]", "[Backend]", "[Database]", "[Auth]"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs italic rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-400 dark:text-zinc-500"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
+              </div>
+            </motion.div>
+
+            {/* Platform 4 — Club Selection Platform (in development) */}
+            <motion.div
+              variants={fadeUp}
+              whileHover={{ y: -5 }}
+              className="group flex flex-col p-8 rounded-3xl border border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-950/50 hover:bg-white dark:hover:bg-zinc-900 hover:border-sky-300 dark:hover:border-sky-700 transition-all duration-300"
+            >
+              <div className="flex items-start justify-between mb-6">
+                <span className="px-3 py-1 rounded-full bg-sky-100 dark:bg-sky-500/10 text-sky-700 dark:text-sky-300 text-xs font-medium">
+                  Club Recruitment
+                </span>
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 dark:bg-amber-500/10 text-amber-700 dark:text-amber-300 text-xs font-medium">
+                  <span className="w-2 h-2 rounded-full bg-amber-600 dark:bg-amber-400 animate-pulse" />
+                  In Development
+                </span>
+              </div>
+              <h3 className="text-xl font-semibold mb-1">
+                Club Selection Platform
+              </h3>
+              <div className="text-sm font-medium text-sky-600 dark:text-sky-400 mb-3">
+                Transparent club recruitment & selection
+              </div>
+              <p className="text-slate-600 dark:text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+                Club recruitment lacked transparency in how candidates were
+                evaluated and selected.{" "}
+                <span className="italic">
+                  [ADD 1–2 SENTENCES: what the platform does — e.g.
+                  structured scoring, evaluator visibility, applicant status
+                  tracking]
+                </span>
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["[Frontend]", "[Backend]", "[Database]", "[Auth]"].map(
+                  (tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 text-xs italic rounded-full bg-slate-100 dark:bg-zinc-800 text-slate-400 dark:text-zinc-500"
+                    >
+                      {tag}
+                    </span>
+                  ),
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* BUILD LOG SECTION */}
       <section
         id="builds"
@@ -585,7 +1015,7 @@ export default function Portfolio() {
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {[
-                  "Claude API",
+                  "Gemini API",
                   "React",
                   "Vercel Serverless",
                   "Prompt Engineering",
@@ -689,7 +1119,7 @@ export default function Portfolio() {
                 questions, and a Sprint 1 goal.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {["Claude API", "React", "PM Frameworks", "Vercel"].map(
+                {["Gemini API", "React", "PM Frameworks", "Vercel"].map(
                   (tag) => (
                     <span
                       key={tag}

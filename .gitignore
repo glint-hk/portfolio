@@ -15,3 +15,7 @@ dist
 node_modules
 .next/
 .DS_Store
+
+# Personal resumes (keep out of the repo)
+Hrishikesh Kumar CV.pdf
+HrishikeshLinkedIn.pdf
